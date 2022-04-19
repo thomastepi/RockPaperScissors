@@ -131,13 +131,13 @@
     padding: 3px 11px
   }
   
-  #player-label {
+  #player1-label {
     position: absolute;
     top: 22px;
     left: -40px;
   }
   
-  #comp-label {
+  #player2-label {
     position: absolute;
     top: 22px;
     right: -55px;

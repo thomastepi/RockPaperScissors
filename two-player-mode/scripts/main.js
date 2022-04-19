@@ -8,16 +8,28 @@ const player1ScoreSpan = document.getElementById("player_1_score");
 const player2ScoreSpan = document.getElementById("player_2_score");
 const scoreBoardDiv = document.querySelector(".score");
 const result_p = document.querySelector(".result > p");
-const rockImage = document.getElementById("rock");
-const paperImage = document.getElementById("paper");
-const scissorsImage = document.getElementById("scissors");
-
 const rockImage2 = document.getElementById("rock2");
 const paperImage2 = document.getElementById("paper2");
 const scissorsImage2 = document.getElementById("scissors2");
-
 const playActionDiv = document.querySelector(".play-action");
 const resetbtn = document.getElementById("restart");
+const changeName = document.getElementById("player-name");
+const player_1_label = document.getElementById("player1-label");
+const player_2_label = document.getElementById("player2-label");
+
+// function playerName() {
+//     var player_1 = prompt("PLAYER 1 ENTER NAME");
+//     var player_2 = prompt("PLAYER 2 ENTER NAME");
+//     player_1_label.innerHTML = player_1;
+//     player_2_label.innerHTML = player_2;
+
+// }
+changeName.addEventListener('click', playerName = () => {
+    var player_1 = prompt("PLAYER 1 ENTER NAME");
+    var player_2 = prompt("PLAYER 2 ENTER NAME");
+    player_1_label.innerHTML = player_1;
+    player_2_label.innerHTML = player_2;
+});
 
 // reload page
 resetbtn.addEventListener('click', () => {
