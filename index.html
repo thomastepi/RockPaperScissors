@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/2d1282c71b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Rock Paper Scissors</h1>
+  </header>
+  <div class="playerName">
+    <a href="#" id="player-name">Change Player Name</a>
+  </div>  
+
+  <div class="multiPlayer">
+    <a href="two-player-mode/main.html" id="multi-player">2 Player Mode</a>
+  </div>
+
+  <div class="score">
+    <div class="badge" id="player-label">
+      player
+    </div>
+    <div class="badge" id="comp-label">
+      computer
+    </div>
+    <span id="playerScore">0</span>:<span id="compScore">0</span>
+  </div>
+
+  <div class="draw_totalPlays">
+    <div class="draw">
+      Total Draws: <span id="total-draws">0</span>
+    </div>
+    <div class="totalPlays">
+      Total Plays: <span id="total-plays">0</span>
+    </div>
+  </div>
+
+  <div class="result">
+    <p>Remarks</p>
+  </div>
+  <div class="play-action">
+    <h2 id="play-move">Make your Selection</h2>
+  </div>
+  <div class="choices">
+    <div class="choice" id="rock">
+      <img src="images/rock.png" alt="">
+    </div>
+    <div class="choice" id="paper">
+      <img src="images/paper.png" alt="">
+    </div>
+    <div class="choice" id="scissors">
+      <img src="images/scissors.png" alt="">
+    </div>
+  </div>
+
+  <div class="btn">
+    <button id="restart" class="restart-btn" type="button" name="button">Restart Game</button>
+  </div>
+
+  <script src="scripts/index.js" charset="utf-8"></script>
+</body>
+
+</html>
