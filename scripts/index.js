@@ -21,7 +21,7 @@ const playerName = document.getElementById("player-label");
 // Option to change player name
 playerNameChange.addEventListener('click', ()=>{
     var nameEntered = prompt("Enter Your Name");
-    if(nameEntered){
+    if(nameEntered && nameEntered.trim() != ''){
         playerName.innerHTML = nameEntered;
     } else {
         playerName.innerHTML = 'player';
@@ -40,26 +40,26 @@ getCompChoice = () => {
     return options[randomNum];
 }
 
-// win function
+// if player wins
 win = (player, computer) => {
     const compChoice = getCompChoice();
     playerScore++;
     playerScoreSpan.innerHTML = playerScore;
     computerScoreSpan.innerHTML = computerScore;
-    result_p.innerHTML = `computer picked ${computer} YOU WIN!😊`;
+    result_p.innerHTML = `You picked ${player} <br> computer picked ${computer} <br> YOU WIN!😊`;
     document.getElementById(player).classList.add('green-highlight');
     setTimeout(()=>{
         document.getElementById(player).classList.remove('green-highlight')
     }, 400);    
 }
 
-// lose function
+// if player loses
 lose = (player, computer) => {
     const compChoice = getCompChoice();
     computerScore++;
     playerScoreSpan.innerHTML = playerScore;
     computerScoreSpan.innerHTML = computerScore;
-    result_p.innerHTML = `computer picked ${computer} YOU LOSE!😒`;
+    result_p.innerHTML = `You picked ${player} <br> computer picked ${computer} <br> YOU LOSE!😒`;
     document.getElementById(player).classList.add('red-highlight');
     setTimeout(()=>{
         document.getElementById(player).classList.remove('red-highlight')
@@ -67,12 +67,12 @@ lose = (player, computer) => {
     
 }
 
-// draw function
+// if it's a tie game
 draw = (player, computer) => {
     totalDraws++
     const compChoice = getCompChoice();
     totalDrawSpan.innerHTML = totalDraws;
-    result_p.innerHTML = `computer picked ${computer} too. IT'S A DRAW!`;
+    result_p.innerHTML = `You picked ${player} <br> computer picked ${computer} <br> IT'S A DRAW! TRY AGAIN.`;
     document.getElementById(player).classList.add('grey-highlight');
     setTimeout(()=>{
         document.getElementById(player).classList.remove('grey-highlight')
@@ -80,7 +80,7 @@ draw = (player, computer) => {
     
 }
 
-// player gameplay function
+// check winner
 game = (playerChoice) => {
     totalPlays++
     totalPlaySpan.innerHTML = totalPlays;

@@ -17,18 +17,21 @@ const changeName = document.getElementById("player-name");
 const player_1_label = document.getElementById("player1-label");
 const player_2_label = document.getElementById("player2-label");
 
-// function playerName() {
-//     var player_1 = prompt("PLAYER 1 ENTER NAME");
-//     var player_2 = prompt("PLAYER 2 ENTER NAME");
-//     player_1_label.innerHTML = player_1;
-//     player_2_label.innerHTML = player_2;
 
-// }
+// player1 and player2 name change option
 changeName.addEventListener('click', playerName = () => {
     var player_1 = prompt("PLAYER 1 ENTER NAME");
     var player_2 = prompt("PLAYER 2 ENTER NAME");
-    player_1_label.innerHTML = player_1;
-    player_2_label.innerHTML = player_2;
+    if(player_1 && player_1.trim() != ''){
+        player_1_label.innerHTML = player_1;
+    } else {
+        player_1_label.innerHTML = 'player1';
+    }
+    if(player_2 && player_2.trim() != ''){
+        player_2_label.innerHTML = player_2;
+    } else {
+        player_2_label.innerHTML = 'player2';
+    }
 });
 
 // reload page
